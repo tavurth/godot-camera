@@ -1,7 +1,7 @@
 #+TITLE: Godot Camera
 
 ** NOTE
-This repository does not work yet on Android as Godot does not yet have CameraServer support there :(
+This repository does not work yet on Android as [[https://github.com/godotengine/godot/issues/46531][Godot does not yet have CameraServer support there]] :(
 
 ** Base
 
