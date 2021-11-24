@@ -13,14 +13,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NoCamerasFound" type="Label" parent="."]
+[node name="NoCamerasFound" type="VBoxContainer" parent="."]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 80.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="NoCamerasFound"]
+margin_left = 196.0
+margin_top = 445.0
+margin_right = 316.0
+margin_bottom = 525.0
+rect_min_size = Vector2( 80, 80 )
+size_flags_horizontal = 4
 text = "No Cameras Found"
 align = 1
 valign = 1
+
+[node name="ScanAgain" type="Button" parent="NoCamerasFound"]
+margin_left = 216.0
+margin_top = 529.0
+margin_right = 296.0
+margin_bottom = 579.0
+rect_min_size = Vector2( 80, 50 )
+size_flags_horizontal = 4
+text = "Scan Again"
 
 [node name="CamerasContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -46,3 +66,5 @@ alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="NoCamerasFound/ScanAgain" to="." method="_on_ScanAgain_pressed"]

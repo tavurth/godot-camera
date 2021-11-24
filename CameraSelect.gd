@@ -28,3 +28,7 @@ func setup():
 func _ready():
 	var _e = CameraServer.connect("camera_feed_added", self, "_on_new_camera")
 	self.setup()
+
+
+func _on_ScanAgain_pressed():
+	self.setup()
